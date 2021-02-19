@@ -1,0 +1,48 @@
+.button {
+  background: $purple-light;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  font-size: $font-size-large;
+  font-weight: 300;
+  line-height: 1;
+  padding: $s-size;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: rgba(70, 43, 180, 0.377);
+}
+
+.button:focus {
+  background: rgba(51, 28, 145, 0.658);
+}
+
+.button--link {
+  background: none;
+  border: none;
+  color: white;
+  font-size: $m-size;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.button--link:hover {
+  color: #f7f7f76b;
+}
+
+.button--link:focus {
+  color: $night-blue;
+  border: none;
+}
+
+.button--remove {
+  @extend .button;
+  background-color: gray;
+}
+
+.button--remove:hover {
+  @extend .button;
+  background-color: darkgray;
+}

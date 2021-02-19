@@ -1,0 +1,20 @@
+.header {
+  background-image: url("/images/wood-header.jpg");
+  background-size: cover;
+  background-blend-mode: hard-light;
+}
+
+.header__title {
+  font-family: 'Ballet', cursive;
+  color: $off-white;
+  text-decoration: none;
+  h1 {
+    color: $almond;
+    font-size: $header-font-size;
+    margin: 0;
+    transition: $ease;
+    &:hover {
+      filter: $light-up
+    }
+  }
+}

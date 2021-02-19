@@ -1,0 +1,50 @@
+.box-layout {
+  background: url('/images/background-test.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; //Set to 100% of view height
+  width: 100vw;
+}
+
+.box-layout__title {
+  font-family: 'Bodoni Moda', serif;
+  color: $gold;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+.box-layout__text {
+  font-size: $font-size-medium;
+  color: $gold;
+}
+
+.box-layout__box {
+  align-items: center;
+  background: fade-out(rgb(19, 46, 77), .15);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  padding: $l-size $l-size;
+  text-align: center;
+  width: 30rem;
+}
+
+
+
+
+
+
+
+
+
+// .box-layout__box {
+//   background: fade-out(white, .15);
+//   border-radius: 2px;
+//   padding: $l-size $m-size;
+//   text-align: center;
+//   width: 25rem;
+// }

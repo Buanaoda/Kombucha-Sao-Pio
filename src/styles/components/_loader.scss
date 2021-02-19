@@ -1,0 +1,19 @@
+.loader {
+  align-items: center;
+  background: $off-white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+  p {
+    font-size: $font-size-small;
+    font-weight: bold;
+    color: $purple-light;
+  }
+}
+
+.loader__image {
+  height: 30rem;
+  width: 25rem;
+}

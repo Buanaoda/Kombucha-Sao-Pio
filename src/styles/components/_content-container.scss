@@ -1,0 +1,30 @@
+.content-container {
+  margin: 0 auto;
+  padding: 0 $m-size;
+  max-width: 120rem;
+}
+
+.header__content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: $l-size 0;
+  transition: background .3s ease;
+  img {
+    background: $almond;
+    border-radius: 50%;
+    max-width: 15vh;  
+    margin-right: 30px;
+    transition: filter .3s ease;
+    &:hover {
+      filter: brightness(140%);
+      cursor: pointer;
+    }
+  }
+}
+
+.header__title-and-image {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+}

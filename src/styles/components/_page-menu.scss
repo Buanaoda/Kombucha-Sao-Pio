@@ -1,0 +1,30 @@
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-item {
+  color: $almond;
+  font-family: 'Akaya Kanadaka', cursive, italic;
+  font-size: $font-size-very-large;
+  margin: $s-size;
+  text-decoration: none;
+  transition: $ease;
+  &:hover {
+    filter: $light-up;
+  }
+}
+
+.menu-login {
+  background: none;
+  border: none;
+  color: $almond;
+  font-family: 'Akaya Kanadaka', cursive;
+  font-size: $font-size-very-large;  
+  text-decoration: none;
+  transition: $ease;
+  &:hover {
+    filter: $light-up;
+  }
+}

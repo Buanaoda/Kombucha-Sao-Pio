@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import firebase, {firebaseAdmin} from 'firebase';
 import 'firebase/database';
 
 const firebaseConfig = {
@@ -10,6 +10,7 @@ const firebaseConfig = {
   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
 };
 
+admin.initializeApp();
 firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();

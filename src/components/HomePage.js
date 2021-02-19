@@ -4,10 +4,13 @@ import PostList from './PostList';
 import PostListFilters from './PostListFilters';
 
 const HomePage = () => (
-  <div className="content-container">
-    <h1>Home page content</h1>
-    <PostListFilters />
-    <PostList />
+  <div>
+    <div className="list-filters">
+      <PostListFilters />
+    </div>
+    <div className="list-body">
+      <PostList />
+    </div>
   </div>
 );
 

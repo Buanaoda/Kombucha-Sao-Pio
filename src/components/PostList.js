@@ -7,7 +7,7 @@ import selectPosts from '../selectors/posts';
 const PostList = (props) => {
   return (
     <div className="content-container">
-      <h1>Post List..</h1>
+      <h1 className="post-list__header-title">• Artigos e notícias</h1>
       {
         props.posts.length === 0 ? ( "Não há Posts.") : 
           (

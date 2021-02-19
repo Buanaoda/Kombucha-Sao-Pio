@@ -18,3 +18,33 @@
     }
   }
 }
+
+.header__title-and-image {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.header__content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: $l-size 0;
+  img {
+    background: $almond;
+    border-radius: 50%;
+    max-width: 15vh;  
+    margin-right: 30px;
+    transition: filter .3s ease;
+    &:hover {
+      filter: brightness(140%);
+      cursor: pointer;
+    }
+  }
+}
+
+.header-divider {
+  padding: 15px;
+  background-image: url("/images/divider-flowers.png");
+  background-size: unset;
+}

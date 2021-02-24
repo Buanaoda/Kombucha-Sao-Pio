@@ -2,6 +2,7 @@
 import React from 'react';
 import moment from 'moment';
 import { storage } from '../firebase/firebase';
+import imageCompression from 'browser-image-compression';
 
 export default class PostForm extends React.Component {
   constructor(props) {
@@ -25,10 +26,32 @@ export default class PostForm extends React.Component {
     this.setState(() => ({ text }));
   };
   fileSelectedHandler = (event) => {
-    this.setState({
-      picture: event.target.files[0]
-    })
-  };
+    
+    let compressedPic;
+
+    var imageFile = event.target.files[0];
+    console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
+    console.log(`originalFile size ${imageFile.size / 1024 / 1024} MB`);
+    
+    var options = {
+      maxSizeMB: 0.1,
+      maxWidthOrHeight: 1000,
+      useWebWorker: true
+    }
+    imageCompression(imageFile, options)
+      .then((compressedFile) => {
+        console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
+        console.log(`compressedFile size ${compressedFile.size / 1024 / 1024} MB`); // smaller than maxSizeMB
+
+        this.setState({
+          picture: compressedFile
+        });
+        alert("Pode Fazer o Upload!")
+      })
+      .catch(function (error) {
+        console.log(error.message);
+      });
+  }
   fileUploadHandler = () => {
     if (!this.state.picture) {
       return alert("É necessário selecionar uma imagem.")
@@ -50,6 +73,7 @@ export default class PostForm extends React.Component {
             this.setState({
               pictureUrl: url
             })
+            alert("Upload terminado!")
           });
       }
     )
@@ -95,9 +119,10 @@ export default class PostForm extends React.Component {
           </div>
           <div>
             <input
+              accept="image/*"
               className="input"
               type="file"
-              onChange={this.fileSelectedHandler}
+              onChange={event => this.fileSelectedHandler(event)}
             />
           </div>
           <button

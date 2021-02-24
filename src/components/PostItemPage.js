@@ -14,7 +14,7 @@ export class PostItemPage extends React.Component {
         <div className="content-container__item-page">
           <h1>{this.props.post.title}</h1>
           <div className="created-at-text">
-            <p>{moment(this.props.post.createdAt).format('DD/MM/yyyy')}</p>
+            <p>{moment(this.props.post.createdAt).format('DD.MM.yyyy')}</p>
           </div>
           <img src={this.props.post.pictureUrl} />
           <p>{this.props.post.text}</p>

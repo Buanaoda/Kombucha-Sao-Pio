@@ -17,7 +17,7 @@
 }
 
 .about-float {
-  float: left;  
+  float: left;
   width: 8vw;
   margin: 0 20px 0 0;
   img {
@@ -30,10 +30,25 @@
       filter: $light-up;
     }
   }
-  @media (max-width: $desktop-breakpoint) {
-    width: 30vw;
+
+}
+
+.about-float-mini {
+  float: left;
+  width: 30vw;
+  margin: 0 20px 0 0;
+  img {
+    border-radius: 50%;
+    width:30vw;
+  }
+  @media (min-width: $desktop-breakpoint) {
+    width: 8vw;
     img {
-      width:30vw;
+      width: 8vw;
+      transition: $ease;
+      &:hover {
+        filter: $light-up;
+      }
     }
   }
 }

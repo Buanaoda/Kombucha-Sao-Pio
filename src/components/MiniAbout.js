@@ -5,8 +5,10 @@ import { Link } from 'react-router-dom';
 const MiniAbout = () => (
   <div className="about-outer">
     <div>
-      <div>
-        <img src="/images/about-mini.jpg" />
+      <div className="about-float-mini">
+        <Link to="/about">
+          <img src="/images/about-mini.jpg" />
+        </Link>
       </div>
       <p>
         <b>Carlos Roberto</b>, Kombucha brewer profissional. Qualidade em primeiro lugar, Criador da

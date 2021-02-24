@@ -26,12 +26,7 @@ export default class PostForm extends React.Component {
     this.setState(() => ({ text }));
   };
   fileSelectedHandler = (event) => {
-    
-    let compressedPic;
-
     var imageFile = event.target.files[0];
-    console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-    console.log(`originalFile size ${imageFile.size / 1024 / 1024} MB`);
     
     var options = {
       maxSizeMB: 0.1,
@@ -40,9 +35,6 @@ export default class PostForm extends React.Component {
     }
     imageCompression(imageFile, options)
       .then((compressedFile) => {
-        console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-        console.log(`compressedFile size ${compressedFile.size / 1024 / 1024} MB`); // smaller than maxSizeMB
-
         this.setState({
           picture: compressedFile
         });

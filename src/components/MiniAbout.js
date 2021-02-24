@@ -7,7 +7,7 @@ const MiniAbout = () => (
     <div>
       <div className="about-float">
         <Link to="/about">
-          <img src="/images/about-mini.jpg" />
+          <img src="https://firebasestorage.googleapis.com/v0/b/kombucha-sao-pio.appspot.com/o/pictures%2Fabout-mini.jpg?alt=media&token=9844bd84-a6a5-43fc-8cbf-2fc219e19bd3" />
         </Link>
       </div>
       <p>
@@ -17,7 +17,12 @@ const MiniAbout = () => (
       <div className="about-social-links">
         <ul className="list-inline">
           <li>
-            <a href="https://www.linkedin.com/in/carlos-roberto-da-silva-8a566313/" target="_blank">
+            <a href="https://www.facebook.com/carlos.robertodasilva.180" target="_blank">
+              <i className="fab fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/carlosrobertodasilva2001?igshid=8t1yg24ctwn8" target="_blank">
               <i className="fab fa-instagram"></i>
             </a>
           </li>

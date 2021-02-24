@@ -9,19 +9,24 @@ const About = () => (
         <img src="./images/about-pic.jpg" />
       </div>
       <p>
-        <b>Carlos Roberto</b>, apresentado pela primeira vez ao Kombucha por sua filha e genro, 
-        despretenciosamente decide iniciar uma produção artesanal própria. Casado e pai de dois 
-        filhos. Após longa carreira atuando em diversos ramos da construção civil, agora se 
-        aventura em um projeto pessoal de cultivo, fermentação e preparação de Kombucha. 
-        Qualidade sobre quantidade e consistência na produção de um chá Kombucha de alto nível, 
+        <b>Carlos Roberto</b>, apresentado pela primeira vez ao Kombucha por sua filha e genro,
+        despretenciosamente decide iniciar uma produção artesanal própria. Casado e pai de dois
+        filhos. Após longa carreira atuando em diversos ramos da construção civil, agora se
+        aventura em um projeto pessoal de cultivo, fermentação e preparação de Kombucha.
+        Qualidade sobre quantidade e consistência na produção de um chá Kombucha de alto nível,
         utilizando ingredientes de primeira linha e preparado de forma artesanal. A
-        <b> Kombucha São Pio</b> tem um sabor único, e isso tudo graças ao meticuloso estudo 
+        <b> Kombucha São Pio</b> tem um sabor único, e isso tudo graças ao meticuloso estudo
         e dosagem conduzido por ele para chegar ao sabor ideal do chá.
       </p>
       <div className="content-container__social-links">
         <ul className="list-inline">
           <li>
-            <a href="https://www.linkedin.com/in/carlos-roberto-da-silva-8a566313/" target="_blank">
+            <a href="https://www.facebook.com/carlos.robertodasilva.180" target="_blank">
+              <i className="fab fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/carlosrobertodasilva2001?igshid=8t1yg24ctwn8" target="_blank">
               <i className="fab fa-instagram"></i>
             </a>
           </li>

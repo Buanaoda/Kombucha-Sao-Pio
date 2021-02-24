@@ -6,9 +6,7 @@ const MiniAbout = () => (
   <div className="about-outer">
     <div>
       <div className="about-float">
-        <Link to="/about">
-          <img src="https://firebasestorage.googleapis.com/v0/b/kombucha-sao-pio.appspot.com/o/pictures%2Fabout-mini.jpg?alt=media&token=9844bd84-a6a5-43fc-8cbf-2fc219e19bd3" />
-        </Link>
+        <img src="https://firebasestorage.googleapis.com/v0/b/kombucha-sao-pio.appspot.com/o/pictures%2Fabout-mini.jpg?alt=media&token=9844bd84-a6a5-43fc-8cbf-2fc219e19bd3" />
       </div>
       <p>
         <b>Carlos Roberto</b>, Kombucha brewer profissional. Qualidade em primeiro lugar, Criador da

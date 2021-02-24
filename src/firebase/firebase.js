@@ -1,8 +1,6 @@
 import firebase from 'firebase';
 import 'firebase/database';
 
-console.log("aaaaaaaaaaaaaaaaaaaaaa", firebaseConfig) 
-
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
   authDomain: process.env.FIREBASE_AUTH_DOMAIN,
@@ -12,6 +10,7 @@ const firebaseConfig = {
   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
 };
 
+console.log("FirebaseConfig: ", firebaseConfig)
 
 
 firebase.initializeApp(firebaseConfig);

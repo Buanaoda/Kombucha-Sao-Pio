@@ -17,12 +17,21 @@
       filter: $light-up
     }
   }
+  @media (max-width: $desktop-breakpoint) {
+    h1 {
+      font-size: $header-smartphone;
+      text-align: center;
+    }
+  }
 }
 
 .header__title-and-image {
   display: flex;
   align-items: center;
   border-radius: 8px;
+  @media (max-width: $desktop-breakpoint) {
+    flex-direction: column;
+  }
 }
 
 .header__content {
@@ -41,6 +50,19 @@
       cursor: pointer;
     }
   }
+  @media (max-width: $desktop-breakpoint) {
+    align-items: center;
+    justify-content: center;
+    img {
+      margin-right: 0px;
+    }
+  }
+}
+
+.admin-area {
+  @media (max-width: $desktop-breakpoint) {
+    display: none;
+  }  
 }
 
 .header-divider {

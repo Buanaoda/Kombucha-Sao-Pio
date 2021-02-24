@@ -16,6 +16,7 @@ const PostItem = ({ id, isAuthenticated, title, text, createdAt, pictureUrl }) =
       <div className="list-item-card">
         <div className="list-item-content">
           <div className="list-item-picture">
+            <h1 className="list-item-title-mobile">{title}</h1>
             <img className="list-item__picture" src={pictureUrl} />
           </div>
           <div className="list-item-title-text">
@@ -24,7 +25,7 @@ const PostItem = ({ id, isAuthenticated, title, text, createdAt, pictureUrl }) =
           </div>
         </div>
         <div className="list-item-date">
-          <p className="list-item__date">{moment(createdAt).format('DD/MM/yyyy')}</p>
+          <p className="list-item__date">{moment(createdAt).format('DD.MM.yyyy')}</p>
         </div>
       </div>
     </Link>

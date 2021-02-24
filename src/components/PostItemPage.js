@@ -5,16 +5,21 @@ import moment from 'moment';
 import numeral from 'numeral'
 import "numeral/locales/pt-br";
 numeral.locale('pt-br');
+import MiniAbout from './MiniAbout';
 
 export class PostItemPage extends React.Component {
-  render () {
+  render() {
     return (
       <div className="content-container">
-        <h1>Title: {this.props.post.title}</h1>
-        <p>id: {this.props.post.id}</p>
-        <p>text: {this.props.post.text}</p>
-        <p>createdAt: {moment(this.props.post.createdAt).format('DD/MM/yyyy')}</p>
-        <img src={this.props.post.pictureUrl}/>
+        <div className="content-container__item-page">
+          <h1>{this.props.post.title}</h1>
+          <div className="created-at-text">
+            <p>{moment(this.props.post.createdAt).format('DD/MM/yyyy')}</p>
+          </div>
+          <img src={this.props.post.pictureUrl} />
+          <p>{this.props.post.text}</p>
+        </div>
+        <MiniAbout />
       </div>
     );
   }

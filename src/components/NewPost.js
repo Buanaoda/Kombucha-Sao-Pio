@@ -12,11 +12,13 @@ export class NewPost extends React.Component {
   render() {
     return (
       <div className="content-container">
-        <h1>New Post page</h1>
-        <PostForm onSubmit={this.onSubmit}/>
+        <div className="content-container__edit-post">
+          <h1>New Post page</h1>
+          <PostForm onSubmit={this.onSubmit} />
+        </div>
       </div>
     );
-  }  
+  }
 };
 
 const mapDispatchToProps = (dispatch) => ({

@@ -33,26 +33,28 @@ export class LoginPage extends React.Component {
   render() {
     return (
       <div className="content-container">
-        <form className="box-layout__box" onSubmit={this.onSubmit}>
-          <h1 className="box-layout__title">Kombucha São Pio</h1>
-          <input
-            type="text"
-            placeholder="login"
-            autoFocus
-            value={this.state.login}
-            onChange={this.onLoginChange}
-          />
-          <input
-            type="text"
-            placeholder="senha"
-            value={this.state.password}
-            onChange={this.onPasswordChange}
-          />
-          <button>Login</button>
-          <p className="box-layout__text">
-            Área do administrador, necessário realizar o login.
-      </p>
-        </form>
+        <div className="content-container__login-page">
+          <form className="box-layout__box" onSubmit={this.onSubmit}>
+            <h1 className="box-layout__title">Kombucha São Pio</h1>
+            <input
+              type="text"
+              placeholder="login"
+              autoFocus
+              value={this.state.login}
+              onChange={this.onLoginChange}
+            />
+            <input
+              type="password"
+              placeholder="senha"
+              value={this.state.password}
+              onChange={this.onPasswordChange}
+            />
+            <button className="button">Login</button>
+            <p className="box-layout__text">
+              Área do administrador, necessário realizar o login.
+          </p>
+          </form>
+        </div>
       </div>
     )
   }

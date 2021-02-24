@@ -4,12 +4,24 @@
   border-bottom: 1px solid darken($off-white, 7%);
   margin-bottom: $m-size;
   transition: filter .3s ease;
+  h1, p {
+    color: $dark-gray;
+  }
   &:hover {
     filter: brightness(140%);
     cursor: pointer;
+    h1 {
+      color: rgb(109, 0, 0);
+    }
   }
-  h1, p {
-    color: $dark-gray;
+  @media (max-width: $desktop-breakpoint) {
+    border-radius: 5px;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    &:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      filter: none;
+    }
   }
 }
 
@@ -23,23 +35,41 @@
   flex-direction: row;
   justify-content: flex-start;
   padding: $m-size;
+  @media (max-width: $desktop-breakpoint) {
+    flex-direction: column;
+    padding-bottom: 0px;
+  }
 }
 
 .list-item-title-text {
   display: flex;
   align-items: flex-start;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 .list-item__picture {
   max-width: 13rem;
   margin: $s-size $m-size 0 0;
+  @media (max-width: $desktop-breakpoint) {
+    max-width: 100%;
+    flex-direction: column;
+  }
 }
 
 .list-item-title {
   margin: 0;
   text-decoration: none;
   word-break: break-all;
+  @media (max-width: $desktop-breakpoint) {
+    display: none;
+  }
+}
+
+.list-item-title-mobile {
+  display: none;
+  @media (max-width: $desktop-breakpoint) {
+    display: contents;
+  }
 }
 
 .post-list__header-title {
@@ -49,9 +79,22 @@
   color: rgb(37, 37, 37);
 }
 
+.list-item__text {
+  @media (max-width: $desktop-breakpoint) {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    padding: none;
+    margin: none;
+  }
+}
 
-
-
+.list-item__date {
+  @media (max-width: $desktop-breakpoint) {
+    padding-left: 1.6rem;
+  }
+}
 
 
 

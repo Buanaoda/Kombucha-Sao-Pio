@@ -37,7 +37,7 @@ export default class PostForm extends React.Component {
     const uploadTask = storage.ref(`pictures/${picture.name}`).put(picture);
     uploadTask.on(
       "state_changed",
-      snapshot => {},
+      snapshot => { },
       error => {
         console.log(error);
       },
@@ -71,32 +71,47 @@ export default class PostForm extends React.Component {
   };
   render() {
     return (
-      <div className="content-container">
+      <div className="post-form-body">
         <form onSubmit={this.onSubmit}>
           {this.state.error && <p className="form__error">{this.state.error}</p>}
-          <input
-            type="text"
-            placeholder="Título"
-            autoFocus
-            value={this.state.title}
-            onChange={this.onTitleChange}
-          />
-          <textarea
-            placeholder="Texto do post"
-            value={this.state.text}
-            onChange={this.onTextChange}
-          >
-          </textarea>
+          <div className="form-title">
+            <h3>Título</h3>
+            <input
+              type="text"
+              placeholder="Título"
+              autoFocus
+              value={this.state.title}
+              onChange={this.onTitleChange}
+            />
+          </div>
+          <div className="form-text">
+            <h3>Conteúdo</h3>
+            <textarea
+              placeholder="Texto do post"
+              value={this.state.text}
+              onChange={this.onTextChange}
+            >
+            </textarea>
+          </div>
           <div>
-            <button>Salvar post</button>
+            <input
+              className="input"
+              type="file"
+              onChange={this.fileSelectedHandler}
+            />
+          </div>
+          <button
+            className="button"
+            type="button"
+            onClick={this.fileUploadHandler}
+          >
+            Uploade image
+          </button>
+          <img src={this.state.pictureUrl} />
+          <div>
+            <button className="button">Salvar post</button>
           </div>
         </form>
-        <input
-          type="file"
-          onChange={this.fileSelectedHandler}
-        />
-        <button onClick={this.fileUploadHandler}>Uploade image</button>
-        <img src={this.state.pictureUrl} />
       </div>
     )
   }

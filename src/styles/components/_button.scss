@@ -1,0 +1,16 @@
+.button {
+  color: $almond;
+  font-family: 'Akaya Kanadaka', cursive, italic;
+  font-size: $font-size-very-large;
+  margin: $s-size;
+  text-decoration: none;
+  transition: $ease;
+  border-radius: 4px;
+  border: 10px;
+  border-color: $almond;
+  background: rgb(38, 56, 38);
+  padding: $xs-size $m-size;
+  &:hover {
+    filter: $light-up;
+  }
+}

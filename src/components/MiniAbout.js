@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 const MiniAbout = () => (
   <div className="about-outer">
     <div>
-    <img src="/images/kombucha-icon.jpg" />
       <div className="about-float">
         <img src="/images/kombucha-icon.jpg" />
       </div>
